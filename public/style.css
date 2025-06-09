@@ -1,0 +1,173 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-image: url('background.jpg'); /* relative to your CSS file */
+  background-size: cover;        /* scale image to cover entire area */
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;  /* prevent tiling */
+  background-attachment: fixed;  /* stay fixed on scroll */
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+label {
+  display: block;
+  background-color: #f3f3f3;
+  padding: 0.75rem 1rem;
+  margin: 0.4rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+label:hover {
+  background-color: #e0e0e0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  border: 2px solid #ff0080;
+  background-color: #ffe6f1;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff0080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e60073;
+}
+
+#result {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ff0080;
+  font-weight: bold;
+}
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  width: 130px;
+}
+
+.quiz-option img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-option span {
+  font-weight: 500;
+  text-align: center;
+}
+
+.quiz-option:hover {
+  transform: scale(1.05);
+  border-color: #ff0080;
+}
+
+/* Hide actual radio buttons */
+.quiz-option input[type="radio"] {
+  display: none;
+}
+
+/* Highlight when selected */
+.quiz-option input[type="radio"]:checked + img,
+.quiz-option input[type="radio"]:checked + span {
+  border: 2px solid #ff0080;
+  background-color: #ffe6f1;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  form {
+    padding: 1rem;
+  }
+}
+
+
+/* Common button styles */
+button {
+  background-color: #f48fb1;
+  border: none;
+  padding: 12px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 200px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #ec407a;
+}
+
+/* Container for all buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}

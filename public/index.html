@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="quiz-form">
+        <h1>Are you My Melody or Kuromi?</h1>
+        <h3>What is your favorite color?</h3>
+        <label><input class = "options" type="radio" name="color" value="1" required> Pink</label>
+        <label><input class = "options" type="radio" name="color" value="2"> Blue</label>
+        <label><input class = "options" type="radio" name="color" value="3"> Black</label>
+        <label><input class = "options" type="radio" name="color" value="4"> Purple</label>
+
+        <h3>What is your favorite type of music?</h3>
+        <label><input class = "options" type="radio" name="music" value="1" required> Rock</label>
+        <label><input class = "options" type="radio" name="music" value="2"> Pop</label>
+        <label><input class = "options" type="radio" name="music" value="3"> Indie</label>
+        <label><input class = "options" type="radio" name="music" value="4"> R&B</label>
+
+        <h3>What is your favorite activity?</h3>
+        <label><input class = "options" type="radio" name="activity" value="1" required> Sports</label>
+        <label><input class = "options" type="radio" name="activity" value="2"> Arts & Crafts</label>
+        <label><input class = "options" type="radio" name="activity" value="3"> Making music</label>
+        <label><input class = "options" type="radio" name="activity" value="4"> Shopping</label>
+
+    <!-- Button Group -->
+    <div class="button-group">
+    <button type="submit" id="submit-button">Submit</button>
+
+    <button id="rename-button">Rename</button>
+
+    <button id="reset-button">Reset</button>
+    </div>
+
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
